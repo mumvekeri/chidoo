@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Boyfriend?</title>
+    <style>
+        /* Body and Background */
+        body {
+            font-family: 'Poppins', sans-serif; /* Modern font */
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee); /* Soft pastel gradient */
+            text-align: center;
+            padding: 50px;
+            color: #333;
+            animation: background-fade 8s ease-in-out infinite; /* Smooth background transition */
+        }
+
+        /* Container Styling */
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in-out; /* Container animation */
+        }
+
+        /* Heading */
+        h1 {
+            color: #ff6f91; /* Coral Pink */
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Button Styling */
+        .button {
+            background-color: #4facfe; /* Bright Blue */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: pulse 2s infinite; /* Button pulse animation */
+        }
+
+        .button:hover {
+            background-color: #00aaff;
+            transform: scale(1.05);
+        }
+
+        /* Hidden Message */
+        #message {
+            margin-top: 30px;
+            font-size: 1.4rem;
+            color: #ff6f61; /* Soft Coral */
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        /* Reply Form */
+        .reply-form {
+            display: none;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        /* Form Input and Submit Styling */
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+        }
+
+        input[type="submit"] {
+            background-color: #284ea7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1e397d;
+        }
+
+        /* Photos Section */
+        .photos {
+            margin-top: 20px;
+        }
+
+        .photos img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .photos img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes background-fade {
+            0%, 100% { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+            50% { background: linear-gradient(to right, #a6c1ee, #fbc2eb); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>💖 Dear Hilary 💖</h1>
+        <p>Life has a way of surprising us with the most meaningful connections when we least expect them. With you, every moment feels like a treasure, whether we’re laughing, talking, or just enjoying each other’s company in silence. You bring so much calm and joy into my life, and I find myself thinking about the future, imagining days filled with more of these small, precious moments.</p>
+        
+        <!-- Photos Section -->
+        <div class="photos">
+            <img src="tah.jpg" alt="Picture together">
+            <img src="WhatsApp Image 2024-09-21 at 21.53.10_e61dc76c.jpg" alt="Picture together">
+        </div>
+
+        <p>Click the button to reveal my message and let me know what you think!</p>
+        <button class="button" onclick="showMessage()">Reveal Message</button>
+        
+        <!-- Hidden Message -->
+        <p id="message">
+            You make me smile every day 😊, and I’d love to make it official 💕. 
+            Will you be my boyfriend? 🌹 <br>
+            <img src="https://img.icons8.com/color/96/000000/heart-with-arrow.png" alt="Heart with Arrow">
+        </p>
+
+        <!-- Reply Form -->
+        <div class="reply-form" id="replyForm">
+            <h2>Will You Be My Boyfriend?</h2>
+            <p>What do you say? 😍</p>
+            <form action="https://formspree.io/f/mqkrjbyg" method="POST">
+                <input type="text" name="message" placeholder="Your response here..." required>
+                <br>
+                <input type="submit" value="Send Reply">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            var message = document.getElementById('message');
+            var form = document.getElementById('replyForm');
+            message.classList.add('fade-in');
+            form.classList.add('fade-in');
+        }
+    </script>
+
+</body>
+</html>
